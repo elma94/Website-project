@@ -1,22 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Archivo&display=swap');
-
 @import url('https://fonts.googleapis.com/css?family=Belleza&display=swap');
 
-
+/* MOBILE FIRST */
 header{
     display: block;
     height: 260px;
 }
 
-.banner{
-    height: 260px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    transform: scaleX(-1);
-    z-index: -1;
-}
+/* NAVBAR */
 
 #navbar{
     position: absolute;
@@ -26,44 +18,9 @@ header{
     top: 0;
 }
 
-.background-blur-img{
-    display: none;
-}
-
 #navbar label, #hamburger {
     display: none;
     top: 0;
-}
-
-#navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;   
-}
-
-#navbar ul li {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 5px;
-    
-}
-#navbar ul li a {
-    color: rgba(137, 147, 151, 0.959);
-    text-decoration: none;
-    padding-bottom: 5px;
-    top: 0;
-    letter-spacing: 2.5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    
-}
-
-#navbar ul {
-    display: block;     
-}
-
-#navbar input:checked ~ ul {
-    display: none; 
 }
 
 #navbar label {
@@ -78,7 +35,20 @@ header{
     z-index: 100;
 }
 
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;   
+    display: block;     
+}
+
+
+#navbar input:checked ~ ul {
+    display: none; 
+}
+
 #navbar ul li {
+    box-sizing: border-box;
     display: block;
     position: sticky;
     width: 100%;
@@ -90,10 +60,34 @@ header{
     color: rgba(137, 147, 151, 0.959);
 }
 
+#navbar ul li a {
+    color: rgba(137, 147, 151, 0.959);
+    text-decoration: none;
+    padding-bottom: 5px;
+    top: 0;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
 #navbar ul li a:hover{
     border-bottom: 5px solid rgba(57, 240, 215, 0.719);
 }
 
+/* BACKGROUND BLURRED IMAGE */
+.background-blur-img{
+    display: none;
+}
+
+/* HEADER IMAGE */
+.banner{
+    height: 260px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scaleX(-1);
+    z-index: -1;
+}
 #banner-headings{
     position: absolute;
     top: 150px;
@@ -139,7 +133,128 @@ header{
     height: 50%;
     margin-left: 3px;
 }
+/* MAIN */
 
+/* BOOKING SECTION */
+#booking-box{
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 10000;
+    background: white;
+    padding-bottom: 50px;
+    margin: 0;
+}
+#booking-bar{
+    display: inline-block;
+    width: 80%;
+    padding: 0 10%;
+    z-index: 10000;
+    background: white;
+}
+
+.booking-bar-heading{
+    position: relative;
+    height: 30px;
+    top: 0px;
+    z-index: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(2, 24, 34, 0.959);
+    font-family: 'Poppins', sans-serif;
+    
+}
+#booking-form{
+    position: relative;
+    padding-bottom: 20px;
+    z-index: 10000;
+    background: white;
+}
+
+.toggle{
+    color: red;
+    display: inline-block;
+    margin-left: calc(50% - 15px);
+}
+
+#booking-box input:checked ~ #booking-form{
+    color: yellow;
+    display: none;
+}
+
+#booking-box #collapsible{
+    display: none;
+}
+
+.booking-title-box{
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    height: 100%;
+    padding-bottom: 20px;
+    margin-top: 10%;
+}
+
+#booking-form > .booking-title-box label{
+    height: 20px;
+    padding-top: 10px;
+    font-size: 22px;
+    color: rgba(2, 24, 34, 0.959);
+}
+.booking-location-input, .booking-date-input{
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background: transparent;
+    outline: none;
+    border:none;
+    color: rgba(137, 147, 151, 0.959);
+}
+
+.booking-date-input input{
+    background: transparent;
+    outline: none;
+    border:none;
+    color: rgba(137, 147, 151, 0.959);
+}
+
+#booking-form label{
+    display: block;
+    text-align: center;
+    background: transparent;
+    width: auto;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(2, 24, 34, 0.959);
+}
+
+.booking-location-input select{
+    background: transparent;
+    color: rgba(137, 147, 151, 0.959);
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#booking-location option{
+    color: rgba(2, 24, 34, 0.959);
+    border: none;
+}
+
+.booking-submit-button{
+    background-color: rgba(241, 125, 30, 0.795);
+    border: none;
+    border-radius: 0.3125rem; 
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    color:white;
+}
+
+/* ABOUT SECTION */
 #about-section{
     display: block;
     top: 0;
@@ -195,6 +310,7 @@ header{
     font-size: 12px;
 }
 
+/* ATTRACTIONS SECTION */
 #attractions-section{
     width: 100%;
     padding: 0;
@@ -202,9 +318,29 @@ header{
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     margin-top: 60px;
-
 }
 
+.attractions-heading{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+    width: 100%;
+    color: rgba(2, 24, 34, 0.959)
+}
+
+.attractions-heading-icon{
+    display: block;
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    top: 10px;
+    filter: brightness(90%);
+    padding:0;
+}
+
+/* SLIDER */
 #slider{
     display: block;
     height: 300px;
@@ -335,144 +471,7 @@ img {
     color: black;
 }
 
-.attractions-heading{
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    letter-spacing: 3px;
-    width: 100%;
-    color: rgba(2, 24, 34, 0.959)
-}
-
-.attractions-heading-icon{
-    display: block;
-    margin-top: 20px;
-    width: 20px;
-    height: 20px;
-    align-self: center;
-    top: 10px;
-    filter: brightness(90%);
-    padding:0;
-}
-
-#booking-box{
-    display: block;
-    position: relative;
-    width: 100%;
-    z-index: 10000;
-    background: white;
-    padding-bottom: 50px;
-    margin: 0;
-}
-#booking-bar{
-    display: inline-block;
-    width: 80%;
-    padding: 0 10%;
-    z-index: 10000;
-    background: white;
-}
-
-.booking-bar-heading{
-    position: relative;
-    height: 30px;
-    top: 0px;
-    z-index: 0;
-    bottom: 0;
-    text-align: center;
-    font-size: 14px;
-    color: rgba(2, 24, 34, 0.959);
-    font-family: 'Poppins', sans-serif;
-    
-}
-#booking-form{
-    position: relative;
-    padding-bottom: 20px;
-    z-index: 10000;
-    background: white;
-}
-
-.toggle{
-    color: red;
-    display: inline-block;
-    margin-left: calc(50% - 15px);
-}
-
-#booking-box input:checked ~ #booking-form{
-    color: yellow;
-    display: none;
-}
-
-#booking-box #collapsible{
-    display: none;
-}
-
-.booking-title-box{
-    width: auto;
-    text-align: center;
-    text-transform: uppercase;
-    height: 100%;
-    padding-bottom: 20px;
-    margin-top: 10%;
-}
-
-#booking-form > .booking-title-box label{
-    height: 20px;
-    padding-top: 10px;
-    font-size: 22px;
-    color: rgba(2, 24, 34, 0.959);
-}
-.booking-location-input, .booking-date-input{
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    background: transparent;
-    outline: none;
-    border:none;
-    color: rgba(137, 147, 151, 0.959);
-}
-
-.booking-date-input input{
-    background: transparent;
-    outline: none;
-    border:none;
-    color: rgba(137, 147, 151, 0.959);
-}
-
-#booking-form label{
-    display: block;
-    text-align: center;
-    background: transparent;
-    width: auto;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    color: rgba(2, 24, 34, 0.959);
-}
-
-.booking-location-input select{
-    background: transparent;
-    color: rgba(137, 147, 151, 0.959);
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-#booking-location option{
-    color: rgba(2, 24, 34, 0.959);
-    border: none;
-}
-
-.booking-submit-button{
-    background-color: rgba(241, 125, 30, 0.795);
-    border: none;
-    border-radius: 0.3125rem; 
-    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
-    text-transform: uppercase;
-    color:white;
-}
-
+/* SUBSCRIPTION SECTION */
 
 #subscription{
     position: relative;
@@ -602,6 +601,67 @@ img {
     filter: saturate(0%);
 }
 
+
+
+/* TABLET DEVICES */
+
+@media screen and (min-width: 480px) and (max-width: 779.98px){
+    html{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    header{
+        width: 100vw;
+        padding: 0;
+        margin-left: -10px;
+    }
+    .banner{
+        height: 300px;
+    }
+
+    #banner-heading{
+        font-size: 3.5em;
+        margin-left: 15px;
+    }
+
+    #banner-subheading{
+        margin-left: 18px;
+        font-size: 1.1em;
+        width: 300px;
+        margin-top: 15px;
+    }
+    main{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
+        padding: 0;
+    }
+
+    #attractions-section{
+        margin-top: 0;
+    }
+    .slide-caption p{
+        margin-top: 390px;
+        font-size: 16px;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 100px;
+        padding-bottom: 20px;
+    }
+
+    .slide{
+        height: 600px !important;
+    }
+
+    .about-heading, .attractions-heading{
+        font-size: 30px;
+        letter-spacing: none;
+    }
+}
+
+/* DESKTOP DEVICES */
+
 @media screen and (min-width: 780px){
     
     *:before,
@@ -615,23 +675,7 @@ img {
         padding: 0;
     }
 
-       
-    .background-blur-img{
-        filter: blur(80px);
-        height: 600px;
-        width: 100%;
-        display: block;
-        z-index: -100;
-    }
-
-    main {
-        position: relative;
-        display: block;
-        height: auto;
-        padding: 0px;
-        z-index: 100;
-        overflow: visible;
-    }
+    /* HEADER */
 
     header{
         position: relative;
@@ -642,32 +686,8 @@ img {
         top: 0;
     }
 
-   .banner{
-       position: relative;
-       margin-top: -550px;
-       margin-left: 5%;
-       margin-right: 5%;
-       width: 90%;
-       height: 600px;
-       z-index: 50;
-   }
-
-   .banner img{
-       height: 70vh;
-       width: 100%;
-   }
-   #banner-headings{
-       width: 80%;
-       top: 320px;
-       padding-left: 10%;
-       padding-right: 10%;
-       margin: 0;
-       text-align: left;
-    }
-
-    .banner-txt{
-        padding-top: 7% !important;
-    }
+    /* NAVBAR */
+    
     #navbar {
         position: absolute;
         top: 0;
@@ -690,48 +710,93 @@ img {
     }
 
     .navbar-items{
-    display: flex;
-    justify-content: center;
+        display: flex;
+        justify-content: center;
     }
 
     .navbar-items li {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
-
-   
 
     /* Hide Hamburger */
     #navbar label, #hamburger {
-    display: none;
+        display: none;
     }
 
-    #banner-heading{
-    position: relative;
-    color: transparent;
-    background: transparent;
-    background-clip: text;
-    text-shadow: 1px 1px rgba(255, 255, 255, 0.76);
-    font-size: 8rem;
-    font-family: 'Archivo', sans-serif;
-    width: 100%;
-    z-index: 50000;
+    /* BLURRED IMAGE */
+    .background-blur-img{
+        filter: blur(80px);
+        height: 600px;
+        width: 100%;
+        display: block;
+        z-index: -100;
     }
 
+    /* HEADER IMAGE */
+    .banner{
+        position: relative;
+        margin-top: -550px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        height: 600px;
+        z-index: 50;
+    }
+ 
+    .banner img{
+        height: 70vh;
+        width: 100%;
+    }
+    #banner-headings{
+        width: 80%;
+        top: 320px;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin: 0;
+        text-align: left;
+     }
+
+     #banner-heading{
+        position: relative;
+        color: transparent;
+        background: transparent;
+        background-clip: text;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.76);
+        font-size: 8rem;
+        font-family: 'Archivo', sans-serif;
+        width: 100%;
+        z-index: 50000;
+    }
+    
     #banner-subheading{
-    position: relative;
-    font-size: 2rem;
-    color: white;
-    font-family: 'Archivo', sans-serif;
-    text-transform: uppercase;
-    width: 100%;
-    letter-spacing: 11px;
-    opacity: 0.9;
-    text-shadow: 0px 15px 3px rgba(150, 150, 150, 0.77); 
-    z-index: 50000;
+        position: relative;
+        font-size: 2rem;
+        color: white;
+        font-family: 'Archivo', sans-serif;
+        text-transform: uppercase;
+        width: 100%;
+        letter-spacing: 11px;
+        opacity: 0.9;
+        text-shadow: 0px 15px 3px rgba(150, 150, 150, 0.77); 
+        z-index: 50000;
+    }
+ 
+     .banner-txt{
+         padding-top: 7% !important;
     }
 
+    /* MAIN */
+    main {
+        position: relative;
+        display: block;
+        height: auto;
+        padding: 0px;
+        z-index: 100;
+        overflow: visible;
+    }
 
+    /* ABOUT SECTION */
     #about-section{
         position: relative;
         background: white;
@@ -772,7 +837,7 @@ img {
         right: 10%;
     }
 
-
+    /* ATTRACTIONS SECTION */
     #attractions-section{
         height: 1000px;
         width: 70%;
@@ -788,7 +853,6 @@ img {
         padding-top: 200px;
         
     }
-
     .attractions-heading{
         font-size: 3rem;
         letter-spacing: 0;
@@ -797,6 +861,7 @@ img {
         padding-bottom: 100px;
     }
 
+    /* SLIDER */
     .slide{
         width: 100%;
         height: 400px;
@@ -804,16 +869,16 @@ img {
         top: 0;
         }
 
-        .slider{
-            position: relative;
-            height: 400px;
-            background-color: #fffdf0bd;
-        }
+    .slider{
+        position: relative;
+        height: 400px;
+        background-color: #fffdf0bd;
+    }
 
-        .slider-wrapper ul li{
-           
-            z-index: 1000;
-        }
+    .slider-wrapper ul li{
+        z-index: 1000;
+    }
+
     .slide-figure{
         width: 100%;
         height: 400px;
@@ -886,6 +951,7 @@ img {
     }
 
 
+    /* BOOKING SECTION */
     #booking-bar{
         position: relative;
         background-image: none;
@@ -903,22 +969,6 @@ img {
         font-size: 2rem;
         padding-top: 40px;
         font-family: 'Poppins', sans-serif;
-        
-
-    }
-
-    #subscription{
-        position: relative;
-        width: 100%;
-        height: 100px;
-        top: 0;
-        background-color: white;
-        color: rgba(137, 147, 151, 0.959);
-        
-    }
-
-    .input-field{
-        width: 600px;
     }
 
     #booking-box{
@@ -1054,19 +1104,19 @@ img {
     .booking-submit-button label:hover{
         cursor: pointer;
     }
-    .contact-footer-icon{
-        width: 50px;
-        height: 50px;
-    }
 
-
+    /* SUBSCRIPTION SECTION */
     #subscription{
         position: relative;
+        width: 100%;
         top: 0;
+        background-color: white;
+        color: rgba(137, 147, 151, 0.959);
         padding: 0;
         height: 300px;
     }
 
+    
     #subscription-form{
         height: 200px;
         padding: 50px;
@@ -1094,6 +1144,17 @@ img {
         box-shadow: none;
     }
 
+    .input-field{
+        width: 600px;
+    }
+
+    
+    .contact-footer-icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    /* FOOTER */
     #contact{
         display: flex;
         flex-direction: column;
@@ -1116,38 +1177,38 @@ img {
         width: 100%;
         height: 100px;
     } 
-footer{
-    width: 100%;
-    bottom: 0;
-    height: 500px;
-    
-}
-    
+    footer{
+        width: 100%;
+        bottom: 0;
+        height: 500px;
+    }
 }
 
+/* LARGE DESKTOPS */
 @media screen and (min-width: 1400px){
-        html{
-            padding: 0;
-            margin: 0;
-        }
-    body{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 5vw;
-            margin-right: 5vw;
-            width: 90vw;
-            padding: 0;
-        }
+    html{
+        padding: 0;
+        margin: 0;
+    }
 
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
+        padding: 0;
+    }
 }
 
+/* EXTRA LARGE DESKTOPS */
 @media screen and (min-width: 2000px){
     html{
         padding: 0;
         margin: 0;
     }
-body{
+    body{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1155,61 +1216,5 @@ body{
         margin-right: 20vw;
         width: 60vw;
         padding: 0;
-    }
-
-}
-
-@media screen and (min-width: 480px) and (max-width: 780px){
-    html{
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-    }
-    header{
-        width: 100vw;
-        padding: 0;
-        margin-left: -10px;
-    }
-    .banner{
-        height: 300px;
-    }
-
-    #banner-heading{
-        font-size: 3.5em;
-        margin-left: 15px;
-    }
-
-    #banner-subheading{
-        margin-left: 18px;
-        font-size: 1.1em;
-        width: 300px;
-        margin-top: 15px;
-    }
-main{
-        margin-left: 5vw;
-        margin-right: 5vw;
-        width: 90vw;
-        padding: 0;
-    }
-
-    #attractions-section{
-        margin-top: 0;
-    }
-    .slide-caption p{
-        margin-top: 390px;
-        font-size: 16px;
-        padding-left: 10%;
-        padding-right: 10%;
-        height: 100px;
-        padding-bottom: 20px;
-    }
-
-    .slide{
-        height: 600px !important;
-    }
-
-    .about-heading, .attractions-heading{
-        font-size: 30px;
-        letter-spacing: none;
     }
 }

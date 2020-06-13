@@ -15,6 +15,6 @@ Website is a small and short presentation of an island of Mallorca where you can
 
 <img src="website_design.jpg" 
 raw=true
-alt="portfolio design"/>
+alt="website design"/>
 
 by Elma Mehmedić

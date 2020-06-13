@@ -69,7 +69,7 @@ header{
 #navbar label {
     display: inline-block;
     color: rgba(5, 105, 88, 0.63);
-    background: #fffdf0;
+    background: white;
     font-style: normal;
     font-size: 1.5em;
     padding: 15px;
@@ -85,7 +85,7 @@ header{
     text-align: center;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
-    background: #fffdf0;
+    background: white;
     padding: 15px;
     color: rgba(137, 147, 151, 0.959);
 }
@@ -144,6 +144,7 @@ header{
     display: block;
     top: 0;
     margin: 0;
+    padding: 0;
     background: white;
     background-size: cover;
     height: 400px;
@@ -196,6 +197,7 @@ header{
 
 #attractions-section{
     width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
@@ -211,7 +213,6 @@ header{
 
 img {
     max-width: 100%;
-    vertical-align: middle;
 }
   
 .trigger {
@@ -240,7 +241,7 @@ img {
     object-fit: fill;
     display: block;
     margin: 0 auto;
-    background-size: cover;
+    background-size: 100% 100%;
 }
   
 .slide-figure {
@@ -326,11 +327,11 @@ img {
     cursor: pointer;
     transition: background-color .25s, color .25s ease-in-out;
 }
-  
+
 .slider-nav__label:hover,
 .slider-nav__label:active,
 .slider-nav__label:focus {
-    background-color: orangered;
+    background-color: rgba(241, 125, 30, 0.795);
     color: black;
 }
 
@@ -359,23 +360,22 @@ img {
     position: relative;
     width: 100%;
     z-index: 10000;
-    background: #fffdf0;
+    background: white;
     padding-bottom: 50px;
+    margin: 0;
 }
-
 #booking-bar{
     display: inline-block;
     width: 80%;
     padding: 0 10%;
     z-index: 10000;
-    background: #fffdf0;
+    background: white;
 }
 
 .booking-bar-heading{
     position: relative;
     height: 30px;
     top: 0px;
-    background: rgba(245, 245, 220, 0.5);
     z-index: 0;
     bottom: 0;
     text-align: center;
@@ -388,7 +388,7 @@ img {
     position: relative;
     padding-bottom: 20px;
     z-index: 10000;
-    background: #fffdf0;
+    background: white;
 }
 
 .toggle{
@@ -491,6 +491,7 @@ img {
 
 #subscription-form{
     height: 120px;
+    color:rgba(137, 147, 151, 0.959);
 }
 
 .subscribe-heading{
@@ -514,7 +515,7 @@ img {
     display: inline-block;
     text-align: center;
     background: transparent;
-    height: 50px;
+    height: 60px;
     outline: none;
     color: #222;
     transition: 0.3s linear;
@@ -543,7 +544,7 @@ img {
     flex-direction: column;
     height: 250px;
     width: 100%;
-    color: rgba(201,201,201,1);
+    color: rgba(137, 147, 151, 0.959);
     line-height: 1.5em;
 }
 
@@ -611,6 +612,7 @@ img {
     body {
         min-height: 100%;
         width: 100%;
+        padding: 0;
     }
 
        
@@ -824,7 +826,7 @@ img {
         margin-left: -90px;
     }
     .slide-img img{
-        width: auto;
+        width: 100%;
         height: 100%;
     }
 
@@ -900,7 +902,7 @@ img {
         right: 10%;
         font-size: 2rem;
         padding-top: 40px;
-        font-family: 'Archivo', sans-serif;
+        font-family: 'Poppins', sans-serif;
         
 
     }
@@ -911,6 +913,7 @@ img {
         height: 100px;
         top: 0;
         background-color: white;
+        color: rgba(137, 147, 151, 0.959);
         
     }
 
@@ -1099,6 +1102,7 @@ img {
         margin: 0;
         height: 300px;
         background-image: none;
+        color:rgba(137, 147, 151, 0.959);
     }
     .contact-footer-icon{
         width: 30px;
@@ -1153,4 +1157,59 @@ body{
         padding: 0;
     }
 
+}
+
+@media screen and (min-width: 480px) and (max-width: 780px){
+    html{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    header{
+        width: 100vw;
+        padding: 0;
+        margin-left: -10px;
+    }
+    .banner{
+        height: 300px;
+    }
+
+    #banner-heading{
+        font-size: 3.5em;
+        margin-left: 15px;
+    }
+
+    #banner-subheading{
+        margin-left: 18px;
+        font-size: 1.1em;
+        width: 300px;
+        margin-top: 15px;
+    }
+main{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
+        padding: 0;
+    }
+
+    #attractions-section{
+        margin-top: 0;
+    }
+    .slide-caption p{
+        margin-top: 390px;
+        font-size: 16px;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 100px;
+        padding-bottom: 20px;
+    }
+
+    .slide{
+        height: 600px !important;
+    }
+
+    .about-heading, .attractions-heading{
+        font-size: 30px;
+        letter-spacing: none;
+    }
 }
